@@ -1,0 +1,378 @@
+/* ============================= */
+/* SECTION DIVIDER */
+/* ============================= */
+
+.section-divider {
+  position: relative;
+  padding: 120px 8vw;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8f8f8 20%,
+    #d4a017 50%,
+    #1a1a1a 80%,
+    #000000 100%
+  );
+  overflow: hidden;
+}
+
+/* Gradient overlays for smooth transition */
+.divider-gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.divider-gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    #000000 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Decorative paw prints */
+.divider-paw {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.paw-divider-1 {
+  top: 15%;
+  left: 8%;
+  width: 60px;
+  height: 60px;
+}
+
+.paw-divider-2 {
+  top: 25%;
+  right: 12%;
+  width: 55px;
+  height: 55px;
+}
+
+.paw-divider-3 {
+  bottom: 30%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+}
+
+.paw-divider-4 {
+  bottom: 20%;
+  right: 10%;
+  width: 58px;
+  height: 58px;
+}
+
+.paw-divider-5 {
+  top: 50%;
+  left: 5%;
+  width: 45px;
+  height: 45px;
+}
+
+.paw-divider-6 {
+  top: 55%;
+  right: 6%;
+  width: 52px;
+  height: 52px;
+}
+
+/* CONTAINER */
+.divider-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+/* CONTENT */
+.divider-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* DECORATIVE LINES */
+.divider-line-top,
+.divider-line-bottom {
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #ffffff 50%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* HEADING */
+.divider-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(212, 160, 23, 0.3);
+  margin: 0;
+}
+
+/* TEXT */
+.divider-text {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+/* CTA BUTTON */
+.divider-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 48px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #000000;
+  background: linear-gradient(135deg, #d4a017 0%, #f4c430 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 
+    0 10px 30px rgba(212, 160, 23, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-top: 8px;
+}
+
+.divider-cta svg {
+  transition: transform 0.3s ease;
+}
+
+.divider-cta:hover svg {
+  transform: translateX(5px);
+}
+
+.divider-cta:active {
+  box-shadow: 
+    0 5px 15px rgba(212, 160, 23, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* RESPONSIVE - TABLET */
+@media (max-width: 1024px) {
+  .section-divider {
+    padding: 100px 6vw;
+  }
+
+  .divider-content {
+    gap: 28px;
+  }
+
+  .divider-line-top,
+  .divider-line-bottom {
+    width: 100px;
+    height: 2.5px;
+  }
+
+  .paw-divider-1,
+  .paw-divider-2,
+  .paw-divider-3,
+  .paw-divider-4,
+  .paw-divider-5,
+  .paw-divider-6 {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+  .section-divider {
+    padding: 80px 5vw;
+  }
+
+  .divider-content {
+    gap: 24px;
+  }
+
+  .divider-line-top,
+  .divider-line-bottom {
+    width: 80px;
+    height: 2px;
+  }
+
+  .divider-heading {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .divider-text {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    line-height: 1.7;
+  }
+
+  .divider-cta {
+    padding: 16px 40px;
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .divider-cta svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Hide some paws on mobile for cleaner look */
+  .paw-divider-5,
+  .paw-divider-6 {
+    display: none;
+  }
+
+  /* Reposition remaining paws */
+  .paw-divider-1 {
+    top: 10%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .paw-divider-2 {
+    top: 20%;
+    right: 5%;
+    width: 38px;
+    height: 38px;
+  }
+
+  .paw-divider-3 {
+    bottom: 25%;
+    left: 8%;
+    width: 35px;
+    height: 35px;
+  }
+
+  .paw-divider-4 {
+    bottom: 15%;
+    right: 6%;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Reduce gradient overlay heights */
+  .divider-gradient-top,
+  .divider-gradient-bottom {
+    height: 60px;
+  }
+}
+
+/* RESPONSIVE - SMALL MOBILE */
+@media (max-width: 480px) {
+  .section-divider {
+    padding: 60px 5vw;
+  }
+
+  .divider-content {
+    gap: 20px;
+  }
+
+  .divider-line-top,
+  .divider-line-bottom {
+    width: 60px;
+  }
+
+  .divider-heading {
+    letter-spacing: -0.5px;
+  }
+
+  .divider-text br {
+    display: none;
+  }
+
+  .divider-cta {
+    padding: 14px 36px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  /* Make paws even smaller and more transparent */
+  .divider-paw {
+    opacity: 0.6;
+  }
+
+  .paw-divider-1,
+  .paw-divider-2,
+  .paw-divider-3,
+  .paw-divider-4 {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ACCESSIBILITY - REDUCE MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .divider-cta,
+  .divider-cta svg,
+  .divider-paw {
+    transition: none;
+    animation: none;
+  }
+
+  .divider-cta:hover svg {
+    transform: none;
+  }
+
+  .divider-cta:hover {
+    transform: none;
+  }
+}
+
+/* PRINT STYLES */
+@media print {
+  .section-divider {
+    background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
+    padding: 40px 20px;
+  }
+
+  .divider-paw {
+    display: none;
+  }
+
+  .divider-cta {
+    display: none;
+  }
+
+  .divider-heading,
+  .divider-text {
+    color: #000000;
+    text-shadow: none;
+  }
+}

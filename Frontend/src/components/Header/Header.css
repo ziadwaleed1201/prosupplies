@@ -1,0 +1,92 @@
+/* ============================= */
+/* HEADER BASE */
+/* ============================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+
+  z-index: 1000;
+}
+
+/* INNER */
+.header-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+/* ============================= */
+/* NAV */
+/* ============================= */
+
+.header nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header nav button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+
+/* ACTIVE */
+.header nav button.active {
+  font-weight: 600;
+}
+
+/* GOLD UNDERLINE */
+.nav-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: #d4af37;
+  border-radius: 1px;
+}
